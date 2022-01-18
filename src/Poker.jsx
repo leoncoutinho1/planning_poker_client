@@ -18,20 +18,27 @@ function Poker(props) {
     }
 
     const computeVote = (value) => {
-        props.socket.emit('vote', value);
+        props.socket.emit('vote', {
+            room: props.room,
+            value: value
+        });
     }
 
     const resetGame = () => {
-        props.socket.emit('reset');
+        props.socket.emit('reset', { room: props.room });
     }
 
     const revealGame = () => {
-        props.socket.emit('reveal');
+        props.socket.emit('reveal', { room: props.room });
     }
 
     useEffect(() => {
-        props.socket.emit('join_room', props.user);
+        props.socket.emit('join_room', {
+            user: props.user,
+            room: props.room
+        });
         props.socket.on('players', p => {
+            console.log(p);
             buildPlayersCards(p)
         });
         props.socket.on('reveal', reveal => {
