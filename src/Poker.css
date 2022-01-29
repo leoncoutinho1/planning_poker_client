@@ -1,0 +1,112 @@
+.Poker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Poker ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.Card {
+    border: 2px solid darkcyan;
+    border-radius: 2px;
+    margin: 10px;
+    width: 120px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    font-size: 50px;
+    color:aquamarine;
+}
+
+.scoreboard {
+    width: 35%;
+    border: 2px solid darkcyan;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.Pack {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.Pack li {
+    border: 2px solid darkcyan;
+    border-radius: 2px;
+    margin: 10px;
+    width: 60px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color:aquamarine;
+}
+
+li.active {
+    background-color: darkgray;
+    color:darkslategray;
+}
+
+.Pack li.active {
+    transform: translateY(-5px);
+}
+
+.button {
+    background-color: #282c34;
+    border: 2px solid darkcyan;
+    border-radius: 2px;
+    margin: 10px;
+    width: 90px;
+    height: 35px;
+    font-size: 20px;
+    color:aquamarine;
+}
+
+.button:hover {
+    background-color: #282c34;
+    color:aquamarine;
+    transform: translateY(-5px);
+}
+
+.Poker .list ul {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Poker .list h3 {
+    text-align: center;
+    color: lightgreen;
+    margin-bottom: 40px;
+}
+
+.Poker .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addGameForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.addGameForm input {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background: none;
+    border-bottom: 1px solid black;
+    width: 300px;
+}

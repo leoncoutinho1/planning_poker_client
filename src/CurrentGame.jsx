@@ -1,9 +1,11 @@
 import React from "react";
+import './CurrentGame.css';
 
 function CurrentGame(props) {
     return (
         <h2 className="CurrentGame">
-            {props.title} - {props.points}
+            <p>{props.title}</p>
+            <p>{props.points}</p>
         </h2>
     );
 }

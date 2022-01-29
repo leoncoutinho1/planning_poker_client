@@ -1,0 +1,10 @@
+.Game {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    color: lightgray;
+}
+
+
+

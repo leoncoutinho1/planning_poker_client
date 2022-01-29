@@ -1,100 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     background-color: #282c34;
     font-family: 'Work Sans', sans-serif;
 }
 
 .App {
-  display: grid;
-  place-items: center;
+  margin: 5%;
   height: 100vh;
 }
 
 #loginform {
     padding: 25px;
-    height: 35px;
-    width: 35%;
+    width: 50%;
+    margin: 60vh auto;
     background-color: darkgray;
     display: flex;
     justify-content: space-between;
     border-radius: 4px;
 }
 
-.Poker ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
+#loginform input {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background: none;
+    border-bottom: 1px solid black;
 }
 
-.Card {
+#loginform input:focus {
+    background: none;
+}
+
+#loginform button {
+    outline: 0;
     border: 2px solid darkcyan;
     border-radius: 2px;
-    margin: 10px;
-    width: 120px;
-    height: 200px;
-    display: grid;
-    place-items: center;
-    font-size: 50px;
-    color:aquamarine;
-}
-
-.scoreboard {
-    width: 35%;
-    border: 2px solid darkcyan;
-    border-radius: 2px;
-    margin: 10px;
-    padding: 5px;
-    font-size: 20px;
-    color: whitesmoke;
-    text-align: center;
-}
-
-.Pack {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-}
-
-.Pack li {
-    border: 2px solid darkcyan;
-    border-radius: 2px;
-    margin: 10px;
-    width: 60px;
-    height: 100px;
-    display: grid;
-    place-items: center;
-    font-size: 25px;
-    color:aquamarine;
-}
-
-li.active {
-    background-color: darkgray;
-    color:darkslategray;
-}
-
-.Pack li.active {
-    transform: translateY(-5px);
-}
-
-.button {
     background-color: #282c34;
-    border: 2px solid darkcyan;
-    border-radius: 2px;
-    margin: 10px;
-    width: 90px;
-    height: 35px;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 2px 5px;
+    width: 150px;
     color:aquamarine;
-}
-
-.button:hover {
-    background-color: #282c34;
-    color:aquamarine;
-    transform: translateY(-5px);
 }
