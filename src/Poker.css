@@ -79,8 +79,18 @@ li.active {
     transform: translateY(-5px);
 }
 
+#clear_button {
+    float: right;
+}
+
+.Poker .panel {
+    width: 700px;
+}
+
 .Poker .list ul {
     width: 500px;
+    height: 500px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -102,7 +112,7 @@ li.active {
     flex-direction: row;
     justify-content: space-between;
 }
-.addGameForm input {
+.addGameForm textarea {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;

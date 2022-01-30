@@ -7,3 +7,7 @@
 .CurrentGame p {
     color:lightgray;
 }
+
+#currentTitle {
+    width: 600px;
+}

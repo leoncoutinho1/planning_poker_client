@@ -11,7 +11,7 @@ function Poker(props) {
     const [vote, setVote] = useState(null);
     const [reveal, setReveal] = useState(false);
     const [result, setResult] = useState('');
-    const [title,setTitle] = useState('');
+    const [title, setTitle] = useState('');
     
     const buildPlayersCards = (p) => {
         setPlayers(p);
@@ -30,10 +30,11 @@ function Poker(props) {
     }
 
     const addGame = (title) => {
+        setTitle('');
         props.socket.emit('addGame', {
             room: props.room,
             title: title
-        })
+        });
     }
 
     const resetGame = () => {
@@ -42,6 +43,17 @@ function Poker(props) {
 
     const revealGame = () => {
         props.socket.emit('reveal', { room: props.room });
+    }
+
+    const clearAll = () => {
+        props.socket.emit('clear', { room: props.room });
+    }
+
+    const setActive = (title) => {
+        props.socket.emit('setActive', {
+            room: props.room,
+            title: title
+        })
     }
 
     useEffect(() => {
@@ -81,17 +93,18 @@ function Poker(props) {
                 <Pack computeVote={computeVote} vote={vote}/>
                 <button id='reset_button' className="button" onClick={() => {resetGame()}}>Reset</button>
                 <button id='reveal_button' className="button" onClick={() => {revealGame()}}>Reveal</button>
+                <button id='clear_button' className="button" onClick={() => {clearAll()}}>Clear All</button>
             </div>
             <div className="list">
                 <div>
                     <h3>PlanningTruco</h3>
                     <ul>
-                        {games.filter(g => g.room === props.room).map(g => <Game title={g.title} points={g.points}/>)}
+                        {games.filter(g => g.room === props.room).map(g => <Game title={g.title} points={g.points} setActive={setActive}/>)}
                     </ul>
                 </div>
                 <div className="addGameForm">
-                    <input type="text" name="title" id="title" placeholder="Title..." onChange={(e) => {setTitle(e.target.value)}}/>
-                    <button id='reveal_button' className="button" onClick={() => {addGame(title)}}> + </button>
+                    <textarea name="title" id="title" placeholder="Title..." onChange={(e) => {setTitle(e.target.value)}} value={title}/>
+                    <button id='add_button' className="button" onClick={() => {addGame(title)}}> + </button>
                 </div>
                 
             </div>

@@ -4,7 +4,7 @@ import './CurrentGame.css';
 function CurrentGame(props) {
     return (
         <h2 className="CurrentGame">
-            <p>{props.title}</p>
+            <p id='currentTitle'>{props.title}</p>
             <p>{props.points}</p>
         </h2>
     );
