@@ -19,7 +19,7 @@ body {
 #loginform {
     padding: 25px;
     width: 50%;
-    margin: 60vh auto;
+    margin: 30vh auto;
     background-color: darkgray;
     display: flex;
     justify-content: space-between;
